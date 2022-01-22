@@ -456,7 +456,7 @@ if __name__ == '__main__':
                     eval_explanation(model, "graph", "type", test_type_set,
                                      "./explanations/{}-{}-type-structure-explanation.json".format(data_name,
                                                                                                    model_name), top_k)
-        if data_name = 'WikiTable':
+        if data_name == 'WikiTable':
             logging.info('epoch: {} training relation prediction...'.format(epoch))
             train(model,
                 'relation',
