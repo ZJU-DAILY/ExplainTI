@@ -12,13 +12,13 @@ from transformers import BertModel, RobertaModel, XLNetModel
 from dataloader import TypeDataset, RelationDataset
 
 lm_path = {
-    'bert-base-uncased': './pre-trained-models/bert-base-uncased',
-    'bert-base-cased': './pre-trained-models/bert-base-cased',
-    'bert-large-cased': './pre-trained-models/bert-large-cased',
-    'bert-base-multilingual-uncased': './pre-trained-models/bert-base-multilingual-uncased',
-    'roberta-base': './pre-trained-models/roberta-base',
-    'bert-large-uncased': './pre-trained-models/bert-large-uncased',
-    'roberta-large': './pre-trained-models/roberta-large'
+    'bert-base-uncased': 'bert-base-uncased',
+    'bert-base-cased': 'bert-base-cased',
+    'bert-large-cased': 'bert-large-cased',
+    'bert-base-multilingual-uncased': 'bert-base-multilingual-uncased',
+    'roberta-base': 'roberta-base',
+    'bert-large-uncased': 'bert-large-uncased',
+    'roberta-large': 'roberta-large'
 }
 
 
