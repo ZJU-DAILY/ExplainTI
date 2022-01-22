@@ -15,11 +15,13 @@ from model import LMNet
 from utils import *
 
 lm_path = {
-    'bert-base-uncased': './pre-trained-models/bert-base-uncased',
-    'bert-base-multilingual-uncased': './pre-trained-models/bert-base-multilingual-uncased',
-    'roberta-base': './pre-trained-models/roberta-base',
-    'bert-large-uncased': './pre-trained-models/bert-large-uncased',
-    'roberta-large': './pre-trained-models/roberta-large'
+    'bert-base-uncased': 'bert-base-uncased',
+    'bert-base-cased': 'bert-base-cased',
+    'bert-large-cased': 'bert-large-cased',
+    'bert-base-multilingual-uncased': 'bert-base-multilingual-uncased',
+    'roberta-base': 'roberta-base',
+    'bert-large-uncased': 'bert-large-uncased',
+    'roberta-large': 'roberta-large'
 }
 
 
@@ -456,7 +458,7 @@ if __name__ == '__main__':
                     eval_explanation(model, "graph", "type", test_type_set,
                                      "./explanations/{}-{}-type-structure-explanation.json".format(data_name,
                                                                                                    model_name), top_k)
-        if data_name = 'WikiTable':
+        if data_name == 'WikiTable':
             logging.info('epoch: {} training relation prediction...'.format(epoch))
             train(model,
                 'relation',
