@@ -20,7 +20,7 @@ We used two real world large-scale benchmark datasets from different types for e
 
 **WikiTable**
 
-The WikiTable dataset are Web tables collected from Wikipedia. We used the same train/valid/test splits as [TURL](https://github.com/sunlab-osu/TURL).
+The WikiTable dataset is Web tables collected from Wikipedia. We used the same train/valid/test splits as [TURL](https://github.com/sunlab-osu/TURL).
 
 **GitTable**
 
