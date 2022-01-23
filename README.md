@@ -4,7 +4,7 @@ ExplainTI, a framework of explaining table interpretation using multi-view expla
 
 ## Framework
 
-![The proposed ExplainTI framework](./framework.jpg)
+![The proposed ExplainTI Framework](./framework.jpg)
 
 ## Requirements
 
@@ -28,12 +28,30 @@ The GitTable dataset is the first large-scale relational table corpus. We used i
 
 The raw dataset is from [GitTable](https://gittables.github.io/). The code of preprocessing is in `gittable.py` and the preprocessed data is in `data/GitTable`.
 
+## Build the column graph
+
+```
+python build_graph.py [<args>] [-h | --help]
+```
+
+e.g.
+
+```
+python build_graph.py --data_name=GitTable --sample_size=16
+```
+
 ## Training with ExplainTI
 
 To train the model and get the explanations with ExplainTI:
 
 ```
 python train.py [<args>] [-h | --help]
+```
+
+e.g.
+
+```
+python train.py --le=0.1 --ge=0.1 --se --save_model --data_name=GitTable --path=./data/GitTable --batch_size=160 --column_length=64 --num_type=1141
 ```
 
 The meaning of the flags:

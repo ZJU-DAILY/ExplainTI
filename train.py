@@ -16,8 +16,6 @@ from utils import *
 
 lm_path = {
     'bert-base-uncased': 'bert-base-uncased',
-    'bert-base-cased': 'bert-base-cased',
-    'bert-large-cased': 'bert-large-cased',
     'bert-base-multilingual-uncased': 'bert-base-multilingual-uncased',
     'roberta-base': 'roberta-base',
     'bert-large-uncased': 'bert-large-uncased',
