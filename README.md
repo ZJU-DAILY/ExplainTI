@@ -73,4 +73,4 @@ The meaning of the flags:
 - `--attention_method`: the aggregate method for graph attention. e.g. `dot`
 - `--save_model`: if this flag is on, then save the checkpoint to `{save_path}/{name}.pt`.
 - `--save_path`: see `--save_model`. e.g. `./checkpoint`
-- `--update_epoch`: indicates how often the global embeddings store is updated. e.g. `5`
+- `--update_epoch`: indicates how often the global embeddings store is updated. e.g. `10`
