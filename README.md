@@ -1,4 +1,4 @@
-# ExplainTI: Explaining Table Interpretation using Multi-view Explanations
+# Towards Explainable Table Interpretation Using Multi-view Explanations
 
 ExplainTI, a framework of explaining table interpretation using multi-view explanations. ExplainTI consists of two phases: tables are converted to sequences and lightweight column graphs firstly, then a pre-trained transformer encoder is fine-tuned to aggregate contextual information and provide multi-view explanations: (i) Local Explanations, are the most relevant phrases (w.r.t. pairwise phrases) in columns (w.r.t. column pairs) for the predictions; (ii) Global Explanations are the most influential samples from training data, which tend to have similar labels to the input sample; (iii) Structural Explanations, we design a relatively small-scale but highly effective method to construct column graphs for tables, which can not only aggregate contextual information but also provide explanations from structural view via graph attention mechanism.
 
