@@ -50,6 +50,7 @@ def parse_args(args=None):
     parser.add_argument('--vis_device', type=str, default='0')
     parser.add_argument('--save_model', action='store_true')
     parser.add_argument("--update_epoch",type=int,default=5)
+    parser.add_argument("--cell_duplicated",action="store_true",default=False)
 
     args = parser.parse_args(args)
     return args
@@ -345,14 +346,14 @@ if __name__ == '__main__':
 
     logging.info("[Start] Loading dataset...")
 
-    train_type_set = TypeDataset(path, 'train', model_name, column_length, multi_columns, window_size)
-    valid_type_set = TypeDataset(path, 'dev', model_name, column_length, multi_columns, window_size)
-    test_type_set = TypeDataset(path, 'test', model_name, column_length, multi_columns, window_size)
+    train_type_set = TypeDataset(path, 'train', model_name, column_length, multi_columns, window_size,args.cell_duplicated)
+    valid_type_set = TypeDataset(path, 'dev', model_name, column_length, multi_columns, window_size,args.cell_duplicated)
+    test_type_set = TypeDataset(path, 'test', model_name, column_length, multi_columns, window_size,args.cell_duplicated)
 
     if data_name == 'WikiTable':
-        train_relation_set = RelationDataset(path, 'train', model_name, column_length, multi_columns, window_size)
-        valid_relation_set = RelationDataset(path, 'dev', model_name, column_length, multi_columns, window_size)
-        test_relation_set = RelationDataset(path, 'test', model_name, column_length, multi_columns, window_size)
+        train_relation_set = RelationDataset(path, 'train', model_name, column_length, multi_columns, window_size,args.cell_duplicated)
+        valid_relation_set = RelationDataset(path, 'dev', model_name, column_length, multi_columns, window_size,args.cell_duplicated)
+        test_relation_set = RelationDataset(path, 'test', model_name, column_length, multi_columns, window_size,args.cell_duplicated)
 
     logging.info("[End] Loading dataset...")
 
